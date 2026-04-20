@@ -19,9 +19,11 @@ namespace pryApellidoTest
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
-          frmDos frmDos = new frmDos();
-          frmDos.ShowDialog();
-           
+            
+            this.Hide();           
+            frmDos frmDos = new frmDos();
+            frmDos.ShowDialog();
+            
         }
     }
 }

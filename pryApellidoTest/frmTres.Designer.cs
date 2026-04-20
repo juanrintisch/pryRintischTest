@@ -90,7 +90,7 @@
             this.grpAdicional.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpAdicional.Location = new System.Drawing.Point(15, 89);
             this.grpAdicional.Name = "grpAdicional";
-            this.grpAdicional.Size = new System.Drawing.Size(189, 84);
+            this.grpAdicional.Size = new System.Drawing.Size(189, 72);
             this.grpAdicional.TabIndex = 3;
             this.grpAdicional.TabStop = false;
             this.grpAdicional.Text = "ADICIONAL";
@@ -152,19 +152,20 @@
             this.btnSiguiente.BackColor = System.Drawing.Color.AliceBlue;
             this.btnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSiguiente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSiguiente.Location = new System.Drawing.Point(155, 180);
+            this.btnSiguiente.Location = new System.Drawing.Point(155, 167);
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.Size = new System.Drawing.Size(89, 39);
             this.btnSiguiente.TabIndex = 4;
             this.btnSiguiente.Text = "Siguiente";
             this.btnSiguiente.UseVisualStyleBackColor = false;
+            this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
             // 
             // frmTres
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(256, 231);
+            this.ClientSize = new System.Drawing.Size(256, 212);
             this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.grpAdicional);
             this.Controls.Add(this.grpTipo);
@@ -173,7 +174,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmTres";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmTres";
+            this.Text = "Michelin";
+            this.Load += new System.EventHandler(this.frmTres_Load);
             this.grpTipo.ResumeLayout(false);
             this.grpTipo.PerformLayout();
             this.grpAdicional.ResumeLayout(false);

@@ -76,6 +76,7 @@
             this.cmbLista.Name = "cmbLista";
             this.cmbLista.Size = new System.Drawing.Size(121, 21);
             this.cmbLista.TabIndex = 3;
+            this.cmbLista.SelectedIndexChanged += new System.EventHandler(this.cmbLista_SelectedIndexChanged);
             // 
             // btnRegistrar
             // 
@@ -88,10 +89,12 @@
             this.btnRegistrar.TabIndex = 4;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // btnSiguiente
             // 
             this.btnSiguiente.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnSiguiente.Enabled = false;
             this.btnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSiguiente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSiguiente.Location = new System.Drawing.Point(282, 79);
@@ -117,7 +120,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmDos";
+            this.Text = "Michelin";
             this.ResumeLayout(false);
             this.PerformLayout();
 
