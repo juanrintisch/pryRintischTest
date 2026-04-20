@@ -55,7 +55,13 @@
             // 
             // cmbProducto
             // 
+            this.cmbProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbProducto.FormattingEnabled = true;
+            this.cmbProducto.Items.AddRange(new object[] {
+            "Auto",
+            "Moto",
+            "Bici",
+            "Avion"});
             this.cmbProducto.Location = new System.Drawing.Point(76, 6);
             this.cmbProducto.Name = "cmbProducto";
             this.cmbProducto.Size = new System.Drawing.Size(121, 21);
@@ -144,10 +150,11 @@
             // btnSiguiente
             // 
             this.btnSiguiente.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSiguiente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSiguiente.Location = new System.Drawing.Point(169, 179);
+            this.btnSiguiente.Location = new System.Drawing.Point(155, 180);
             this.btnSiguiente.Name = "btnSiguiente";
-            this.btnSiguiente.Size = new System.Drawing.Size(75, 23);
+            this.btnSiguiente.Size = new System.Drawing.Size(89, 39);
             this.btnSiguiente.TabIndex = 4;
             this.btnSiguiente.Text = "Siguiente";
             this.btnSiguiente.UseVisualStyleBackColor = false;
@@ -157,7 +164,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(256, 219);
+            this.ClientSize = new System.Drawing.Size(256, 231);
             this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.grpAdicional);
             this.Controls.Add(this.grpTipo);

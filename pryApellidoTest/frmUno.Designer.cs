@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUno));
             this.btnIniciar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pcrFoto = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pcrFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // btnIniciar
@@ -39,7 +39,7 @@
             this.btnIniciar.BackColor = System.Drawing.Color.AliceBlue;
             this.btnIniciar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnIniciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIniciar.Location = new System.Drawing.Point(87, 240);
+            this.btnIniciar.Location = new System.Drawing.Point(82, 240);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.Size = new System.Drawing.Size(91, 38);
             this.btnIniciar.TabIndex = 0;
@@ -47,16 +47,16 @@
             this.btnIniciar.UseVisualStyleBackColor = false;
             this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
             // 
-            // pictureBox1
+            // pcrFoto
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = global::pryApellidoTest.Properties.Resources.mman19902000_0;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(239, 200);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.pcrFoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pcrFoto.Image = global::pryApellidoTest.Properties.Resources.mman19902000_0;
+            this.pcrFoto.Location = new System.Drawing.Point(12, 12);
+            this.pcrFoto.Name = "pcrFoto";
+            this.pcrFoto.Size = new System.Drawing.Size(239, 200);
+            this.pcrFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcrFoto.TabIndex = 1;
+            this.pcrFoto.TabStop = false;
             // 
             // frmUno
             // 
@@ -64,13 +64,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(265, 290);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pcrFoto);
             this.Controls.Add(this.btnIniciar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmUno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bienvenido!!!";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcrFoto)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -78,7 +78,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnIniciar;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pcrFoto;
     }
 }
 

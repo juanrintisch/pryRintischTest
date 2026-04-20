@@ -66,7 +66,12 @@
             // 
             // cmbLista
             // 
+            this.cmbLista.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbLista.FormattingEnabled = true;
+            this.cmbLista.Items.AddRange(new object[] {
+            "Rueda",
+            "Ruedita",
+            "Ruedota"});
             this.cmbLista.Location = new System.Drawing.Point(107, 47);
             this.cmbLista.Name = "cmbLista";
             this.cmbLista.Size = new System.Drawing.Size(121, 21);
@@ -89,9 +94,9 @@
             this.btnSiguiente.BackColor = System.Drawing.Color.AliceBlue;
             this.btnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSiguiente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSiguiente.Location = new System.Drawing.Point(282, 78);
+            this.btnSiguiente.Location = new System.Drawing.Point(282, 79);
             this.btnSiguiente.Name = "btnSiguiente";
-            this.btnSiguiente.Size = new System.Drawing.Size(97, 23);
+            this.btnSiguiente.Size = new System.Drawing.Size(97, 36);
             this.btnSiguiente.TabIndex = 5;
             this.btnSiguiente.Text = "Siguiente";
             this.btnSiguiente.UseVisualStyleBackColor = false;
@@ -102,7 +107,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(391, 113);
+            this.ClientSize = new System.Drawing.Size(391, 127);
             this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.cmbLista);
