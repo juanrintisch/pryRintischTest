@@ -41,11 +41,12 @@
             this.cmbProductos = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.droRepuesto = new System.Windows.Forms.RadioButton();
+            this.rdoRepuesto = new System.Windows.Forms.RadioButton();
             this.rdoEquipo = new System.Windows.Forms.RadioButton();
             this.chkInstalacion = new System.Windows.Forms.CheckBox();
             this.chkEnvio = new System.Windows.Forms.CheckBox();
             this.chkGarantia = new System.Windows.Forms.CheckBox();
+            this.btnFinalizar = new System.Windows.Forms.Button();
             this.grpUno.SuspendLayout();
             this.grpDos.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -58,9 +59,9 @@
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.Location = new System.Drawing.Point(6, 16);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(50, 13);
+            this.lblNombre.Size = new System.Drawing.Size(123, 13);
             this.lblNombre.TabIndex = 0;
-            this.lblNombre.Text = "Nombre";
+            this.lblNombre.Text = "Nombre de Producto";
             // 
             // lblLista
             // 
@@ -74,7 +75,7 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(101, 13);
+            this.txtNombre.Location = new System.Drawing.Point(135, 13);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(120, 20);
             this.txtNombre.TabIndex = 0;
@@ -96,7 +97,7 @@
             this.btnRegistrar.BackColor = System.Drawing.Color.AliceBlue;
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.Location = new System.Drawing.Point(227, 11);
+            this.btnRegistrar.Location = new System.Drawing.Point(260, 11);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(98, 23);
             this.btnRegistrar.TabIndex = 1;
@@ -128,19 +129,20 @@
             this.grpUno.Controls.Add(this.cmbLista);
             this.grpUno.Location = new System.Drawing.Point(6, 17);
             this.grpUno.Name = "grpUno";
-            this.grpUno.Size = new System.Drawing.Size(382, 131);
+            this.grpUno.Size = new System.Drawing.Size(382, 132);
             this.grpUno.TabIndex = 4;
             this.grpUno.TabStop = false;
             // 
             // grpDos
             // 
+            this.grpDos.Controls.Add(this.btnFinalizar);
             this.grpDos.Controls.Add(this.groupBox2);
             this.grpDos.Controls.Add(this.groupBox1);
             this.grpDos.Controls.Add(this.cmbProductos);
             this.grpDos.Controls.Add(this.lblProducto);
             this.grpDos.Location = new System.Drawing.Point(6, 17);
             this.grpDos.Name = "grpDos";
-            this.grpDos.Size = new System.Drawing.Size(382, 131);
+            this.grpDos.Size = new System.Drawing.Size(382, 173);
             this.grpDos.TabIndex = 5;
             this.grpDos.TabStop = false;
             this.grpDos.Visible = false;
@@ -167,7 +169,7 @@
             // 
             this.groupBox1.BackColor = System.Drawing.Color.AliceBlue;
             this.groupBox1.Controls.Add(this.rdoEquipo);
-            this.groupBox1.Controls.Add(this.droRepuesto);
+            this.groupBox1.Controls.Add(this.rdoRepuesto);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(9, 50);
             this.groupBox1.Name = "groupBox1";
@@ -190,17 +192,18 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "ADICIONAL";
             // 
-            // droRepuesto
+            // rdoRepuesto
             // 
-            this.droRepuesto.AutoSize = true;
-            this.droRepuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.droRepuesto.Location = new System.Drawing.Point(6, 19);
-            this.droRepuesto.Name = "droRepuesto";
-            this.droRepuesto.Size = new System.Drawing.Size(79, 17);
-            this.droRepuesto.TabIndex = 0;
-            this.droRepuesto.TabStop = true;
-            this.droRepuesto.Text = "Repuseto";
-            this.droRepuesto.UseVisualStyleBackColor = true;
+            this.rdoRepuesto.AutoSize = true;
+            this.rdoRepuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoRepuesto.Location = new System.Drawing.Point(6, 19);
+            this.rdoRepuesto.Name = "rdoRepuesto";
+            this.rdoRepuesto.Size = new System.Drawing.Size(79, 17);
+            this.rdoRepuesto.TabIndex = 0;
+            this.rdoRepuesto.TabStop = true;
+            this.rdoRepuesto.Text = "Repuseto";
+            this.rdoRepuesto.UseVisualStyleBackColor = true;
+            this.rdoRepuesto.CheckedChanged += new System.EventHandler(this.droRepuesto_CheckedChanged);
             // 
             // rdoEquipo
             // 
@@ -247,12 +250,23 @@
             this.chkGarantia.Text = "Garantia";
             this.chkGarantia.UseVisualStyleBackColor = true;
             // 
+            // btnFinalizar
+            // 
+            this.btnFinalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinalizar.Location = new System.Drawing.Point(301, 126);
+            this.btnFinalizar.Name = "btnFinalizar";
+            this.btnFinalizar.Size = new System.Drawing.Size(75, 39);
+            this.btnFinalizar.TabIndex = 6;
+            this.btnFinalizar.Text = "Finalizar";
+            this.btnFinalizar.UseVisualStyleBackColor = true;
+            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
+            // 
             // frmDos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(403, 167);
+            this.ClientSize = new System.Drawing.Size(396, 198);
             this.Controls.Add(this.grpDos);
             this.Controls.Add(this.grpUno);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -287,9 +301,10 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton rdoEquipo;
-        private System.Windows.Forms.RadioButton droRepuesto;
+        private System.Windows.Forms.RadioButton rdoRepuesto;
         private System.Windows.Forms.CheckBox chkGarantia;
         private System.Windows.Forms.CheckBox chkEnvio;
         private System.Windows.Forms.CheckBox chkInstalacion;
+        private System.Windows.Forms.Button btnFinalizar;
     }
 }

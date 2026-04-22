@@ -160,7 +160,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(256, 212);
+            this.ClientSize = new System.Drawing.Size(249, 212);
             this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.grpAdicional);
             this.Controls.Add(this.grpTipo);
