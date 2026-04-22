@@ -124,5 +124,12 @@ namespace pryApellidoTest
 
             }
         }
+
+        private void btnSeguir_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmCuatro frmCuatro = new frmCuatro();
+            frmCuatro.ShowDialog();
+        }
     }
 }

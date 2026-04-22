@@ -47,6 +47,7 @@
             this.chkEnvio = new System.Windows.Forms.CheckBox();
             this.chkGarantia = new System.Windows.Forms.CheckBox();
             this.btnFinalizar = new System.Windows.Forms.Button();
+            this.btnSeguir = new System.Windows.Forms.Button();
             this.grpUno.SuspendLayout();
             this.grpDos.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -135,6 +136,7 @@
             // 
             // grpDos
             // 
+            this.grpDos.Controls.Add(this.btnSeguir);
             this.grpDos.Controls.Add(this.btnFinalizar);
             this.grpDos.Controls.Add(this.groupBox2);
             this.grpDos.Controls.Add(this.groupBox1);
@@ -142,7 +144,7 @@
             this.grpDos.Controls.Add(this.lblProducto);
             this.grpDos.Location = new System.Drawing.Point(6, 17);
             this.grpDos.Name = "grpDos";
-            this.grpDos.Size = new System.Drawing.Size(382, 173);
+            this.grpDos.Size = new System.Drawing.Size(382, 177);
             this.grpDos.TabIndex = 5;
             this.grpDos.TabStop = false;
             this.grpDos.Visible = false;
@@ -252,27 +254,42 @@
             // 
             // btnFinalizar
             // 
+            this.btnFinalizar.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnFinalizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnFinalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFinalizar.Location = new System.Drawing.Point(301, 126);
+            this.btnFinalizar.Location = new System.Drawing.Point(217, 126);
             this.btnFinalizar.Name = "btnFinalizar";
             this.btnFinalizar.Size = new System.Drawing.Size(75, 39);
             this.btnFinalizar.TabIndex = 6;
             this.btnFinalizar.Text = "Finalizar";
-            this.btnFinalizar.UseVisualStyleBackColor = true;
+            this.btnFinalizar.UseVisualStyleBackColor = false;
             this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
+            // 
+            // btnSeguir
+            // 
+            this.btnSeguir.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnSeguir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSeguir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeguir.Location = new System.Drawing.Point(298, 126);
+            this.btnSeguir.Name = "btnSeguir";
+            this.btnSeguir.Size = new System.Drawing.Size(75, 39);
+            this.btnSeguir.TabIndex = 7;
+            this.btnSeguir.Text = "Siguiete";
+            this.btnSeguir.UseVisualStyleBackColor = false;
+            this.btnSeguir.Click += new System.EventHandler(this.btnSeguir_Click);
             // 
             // frmDos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(396, 198);
+            this.ClientSize = new System.Drawing.Size(509, 338);
             this.Controls.Add(this.grpDos);
             this.Controls.Add(this.grpUno);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Michelin";
+            this.Text = "Michelin - Pedido";
             this.Load += new System.EventHandler(this.frmDos_Load);
             this.grpUno.ResumeLayout(false);
             this.grpUno.PerformLayout();
@@ -306,5 +323,6 @@
         private System.Windows.Forms.CheckBox chkEnvio;
         private System.Windows.Forms.CheckBox chkInstalacion;
         private System.Windows.Forms.Button btnFinalizar;
+        private System.Windows.Forms.Button btnSeguir;
     }
 }
