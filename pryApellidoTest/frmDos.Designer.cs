@@ -37,21 +37,21 @@
             this.btnSiguiente = new System.Windows.Forms.Button();
             this.grpUno = new System.Windows.Forms.GroupBox();
             this.grpDos = new System.Windows.Forms.GroupBox();
-            this.lblProducto = new System.Windows.Forms.Label();
-            this.cmbProductos = new System.Windows.Forms.ComboBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.rdoRepuesto = new System.Windows.Forms.RadioButton();
-            this.rdoEquipo = new System.Windows.Forms.RadioButton();
-            this.chkInstalacion = new System.Windows.Forms.CheckBox();
-            this.chkEnvio = new System.Windows.Forms.CheckBox();
-            this.chkGarantia = new System.Windows.Forms.CheckBox();
-            this.btnFinalizar = new System.Windows.Forms.Button();
             this.btnSeguir = new System.Windows.Forms.Button();
+            this.btnFinalizar = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.chkGarantia = new System.Windows.Forms.CheckBox();
+            this.chkEnvio = new System.Windows.Forms.CheckBox();
+            this.chkInstalacion = new System.Windows.Forms.CheckBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rdoEquipo = new System.Windows.Forms.RadioButton();
+            this.rdoRepuesto = new System.Windows.Forms.RadioButton();
+            this.cmbProductos = new System.Windows.Forms.ComboBox();
+            this.lblProducto = new System.Windows.Forms.Label();
             this.grpUno.SuspendLayout();
             this.grpDos.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblNombre
@@ -112,7 +112,7 @@
             this.btnSiguiente.Enabled = false;
             this.btnSiguiente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSiguiente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSiguiente.Location = new System.Drawing.Point(279, 89);
+            this.btnSiguiente.Location = new System.Drawing.Point(279, 126);
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.Size = new System.Drawing.Size(97, 36);
             this.btnSiguiente.TabIndex = 3;
@@ -130,7 +130,7 @@
             this.grpUno.Controls.Add(this.cmbLista);
             this.grpUno.Location = new System.Drawing.Point(6, 17);
             this.grpUno.Name = "grpUno";
-            this.grpUno.Size = new System.Drawing.Size(382, 132);
+            this.grpUno.Size = new System.Drawing.Size(382, 177);
             this.grpUno.TabIndex = 4;
             this.grpUno.TabStop = false;
             // 
@@ -148,37 +148,34 @@
             this.grpDos.TabIndex = 5;
             this.grpDos.TabStop = false;
             this.grpDos.Visible = false;
+            this.grpDos.Enter += new System.EventHandler(this.grpDos_Enter);
             // 
-            // lblProducto
+            // btnSeguir
             // 
-            this.lblProducto.AutoSize = true;
-            this.lblProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProducto.Location = new System.Drawing.Point(6, 16);
-            this.lblProducto.Name = "lblProducto";
-            this.lblProducto.Size = new System.Drawing.Size(64, 13);
-            this.lblProducto.TabIndex = 0;
-            this.lblProducto.Text = "Productos";
+            this.btnSeguir.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnSeguir.Enabled = false;
+            this.btnSeguir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSeguir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeguir.Location = new System.Drawing.Point(301, 126);
+            this.btnSeguir.Name = "btnSeguir";
+            this.btnSeguir.Size = new System.Drawing.Size(75, 39);
+            this.btnSeguir.TabIndex = 7;
+            this.btnSeguir.Text = "Siguiente";
+            this.btnSeguir.UseVisualStyleBackColor = false;
+            this.btnSeguir.Click += new System.EventHandler(this.btnSeguir_Click);
             // 
-            // cmbProductos
+            // btnFinalizar
             // 
-            this.cmbProductos.FormattingEnabled = true;
-            this.cmbProductos.Location = new System.Drawing.Point(76, 13);
-            this.cmbProductos.Name = "cmbProductos";
-            this.cmbProductos.Size = new System.Drawing.Size(257, 21);
-            this.cmbProductos.TabIndex = 1;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.AliceBlue;
-            this.groupBox1.Controls.Add(this.rdoEquipo);
-            this.groupBox1.Controls.Add(this.rdoRepuesto);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(9, 50);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(160, 52);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "TIPO";
+            this.btnFinalizar.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnFinalizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnFinalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinalizar.Location = new System.Drawing.Point(220, 126);
+            this.btnFinalizar.Name = "btnFinalizar";
+            this.btnFinalizar.Size = new System.Drawing.Size(75, 39);
+            this.btnFinalizar.TabIndex = 6;
+            this.btnFinalizar.Text = "Finalizar";
+            this.btnFinalizar.UseVisualStyleBackColor = false;
+            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
             // 
             // groupBox2
             // 
@@ -194,18 +191,51 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "ADICIONAL";
             // 
-            // rdoRepuesto
+            // chkGarantia
             // 
-            this.rdoRepuesto.AutoSize = true;
-            this.rdoRepuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoRepuesto.Location = new System.Drawing.Point(6, 19);
-            this.rdoRepuesto.Name = "rdoRepuesto";
-            this.rdoRepuesto.Size = new System.Drawing.Size(79, 17);
-            this.rdoRepuesto.TabIndex = 0;
-            this.rdoRepuesto.TabStop = true;
-            this.rdoRepuesto.Text = "Repuseto";
-            this.rdoRepuesto.UseVisualStyleBackColor = true;
-            this.rdoRepuesto.CheckedChanged += new System.EventHandler(this.droRepuesto_CheckedChanged);
+            this.chkGarantia.AutoSize = true;
+            this.chkGarantia.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkGarantia.Location = new System.Drawing.Point(6, 42);
+            this.chkGarantia.Name = "chkGarantia";
+            this.chkGarantia.Size = new System.Drawing.Size(74, 17);
+            this.chkGarantia.TabIndex = 2;
+            this.chkGarantia.Text = "Garantia";
+            this.chkGarantia.UseVisualStyleBackColor = true;
+            // 
+            // chkEnvio
+            // 
+            this.chkEnvio.AutoSize = true;
+            this.chkEnvio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkEnvio.Location = new System.Drawing.Point(100, 19);
+            this.chkEnvio.Name = "chkEnvio";
+            this.chkEnvio.Size = new System.Drawing.Size(58, 17);
+            this.chkEnvio.TabIndex = 1;
+            this.chkEnvio.Text = "Envio";
+            this.chkEnvio.UseVisualStyleBackColor = true;
+            // 
+            // chkInstalacion
+            // 
+            this.chkInstalacion.AutoSize = true;
+            this.chkInstalacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkInstalacion.Location = new System.Drawing.Point(6, 19);
+            this.chkInstalacion.Name = "chkInstalacion";
+            this.chkInstalacion.Size = new System.Drawing.Size(88, 17);
+            this.chkInstalacion.TabIndex = 0;
+            this.chkInstalacion.Text = "Instalacion";
+            this.chkInstalacion.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.AliceBlue;
+            this.groupBox1.Controls.Add(this.rdoEquipo);
+            this.groupBox1.Controls.Add(this.rdoRepuesto);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(9, 50);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(160, 52);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "TIPO";
             // 
             // rdoEquipo
             // 
@@ -219,71 +249,44 @@
             this.rdoEquipo.Text = "Equipo";
             this.rdoEquipo.UseVisualStyleBackColor = true;
             // 
-            // chkInstalacion
+            // rdoRepuesto
             // 
-            this.chkInstalacion.AutoSize = true;
-            this.chkInstalacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkInstalacion.Location = new System.Drawing.Point(6, 19);
-            this.chkInstalacion.Name = "chkInstalacion";
-            this.chkInstalacion.Size = new System.Drawing.Size(88, 17);
-            this.chkInstalacion.TabIndex = 0;
-            this.chkInstalacion.Text = "Instalacion";
-            this.chkInstalacion.UseVisualStyleBackColor = true;
+            this.rdoRepuesto.AutoSize = true;
+            this.rdoRepuesto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoRepuesto.Location = new System.Drawing.Point(6, 19);
+            this.rdoRepuesto.Name = "rdoRepuesto";
+            this.rdoRepuesto.Size = new System.Drawing.Size(79, 17);
+            this.rdoRepuesto.TabIndex = 0;
+            this.rdoRepuesto.TabStop = true;
+            this.rdoRepuesto.Text = "Repuseto";
+            this.rdoRepuesto.UseVisualStyleBackColor = true;
+            this.rdoRepuesto.CheckedChanged += new System.EventHandler(this.droRepuesto_CheckedChanged);
             // 
-            // chkEnvio
+            // cmbProductos
             // 
-            this.chkEnvio.AutoSize = true;
-            this.chkEnvio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkEnvio.Location = new System.Drawing.Point(100, 19);
-            this.chkEnvio.Name = "chkEnvio";
-            this.chkEnvio.Size = new System.Drawing.Size(58, 17);
-            this.chkEnvio.TabIndex = 1;
-            this.chkEnvio.Text = "Envio";
-            this.chkEnvio.UseVisualStyleBackColor = true;
+            this.cmbProductos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbProductos.FormattingEnabled = true;
+            this.cmbProductos.Location = new System.Drawing.Point(76, 13);
+            this.cmbProductos.Name = "cmbProductos";
+            this.cmbProductos.Size = new System.Drawing.Size(257, 21);
+            this.cmbProductos.TabIndex = 1;
             // 
-            // chkGarantia
+            // lblProducto
             // 
-            this.chkGarantia.AutoSize = true;
-            this.chkGarantia.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkGarantia.Location = new System.Drawing.Point(6, 42);
-            this.chkGarantia.Name = "chkGarantia";
-            this.chkGarantia.Size = new System.Drawing.Size(74, 17);
-            this.chkGarantia.TabIndex = 2;
-            this.chkGarantia.Text = "Garantia";
-            this.chkGarantia.UseVisualStyleBackColor = true;
-            // 
-            // btnFinalizar
-            // 
-            this.btnFinalizar.BackColor = System.Drawing.Color.AliceBlue;
-            this.btnFinalizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnFinalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFinalizar.Location = new System.Drawing.Point(217, 126);
-            this.btnFinalizar.Name = "btnFinalizar";
-            this.btnFinalizar.Size = new System.Drawing.Size(75, 39);
-            this.btnFinalizar.TabIndex = 6;
-            this.btnFinalizar.Text = "Finalizar";
-            this.btnFinalizar.UseVisualStyleBackColor = false;
-            this.btnFinalizar.Click += new System.EventHandler(this.btnFinalizar_Click);
-            // 
-            // btnSeguir
-            // 
-            this.btnSeguir.BackColor = System.Drawing.Color.AliceBlue;
-            this.btnSeguir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSeguir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSeguir.Location = new System.Drawing.Point(298, 126);
-            this.btnSeguir.Name = "btnSeguir";
-            this.btnSeguir.Size = new System.Drawing.Size(75, 39);
-            this.btnSeguir.TabIndex = 7;
-            this.btnSeguir.Text = "Siguiete";
-            this.btnSeguir.UseVisualStyleBackColor = false;
-            this.btnSeguir.Click += new System.EventHandler(this.btnSeguir_Click);
+            this.lblProducto.AutoSize = true;
+            this.lblProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblProducto.Location = new System.Drawing.Point(6, 16);
+            this.lblProducto.Name = "lblProducto";
+            this.lblProducto.Size = new System.Drawing.Size(64, 13);
+            this.lblProducto.TabIndex = 0;
+            this.lblProducto.Text = "Productos";
             // 
             // frmDos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(509, 338);
+            this.ClientSize = new System.Drawing.Size(403, 218);
             this.Controls.Add(this.grpDos);
             this.Controls.Add(this.grpUno);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -295,10 +298,10 @@
             this.grpUno.PerformLayout();
             this.grpDos.ResumeLayout(false);
             this.grpDos.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }

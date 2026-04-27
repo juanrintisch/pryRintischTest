@@ -29,46 +29,77 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCuatro));
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dtaInfo = new System.Windows.Forms.DataGridView();
+            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AdicionalUno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AdicionalDos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AdicionalTres = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dtaInfo)).BeginInit();
             this.SuspendLayout();
             // 
-            // listBox1
+            // dtaInfo
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(12, 12);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(515, 160);
-            this.listBox1.TabIndex = 0;
+            this.dtaInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtaInfo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Producto,
+            this.Tipo,
+            this.AdicionalUno,
+            this.AdicionalDos,
+            this.AdicionalTres});
+            this.dtaInfo.Location = new System.Drawing.Point(12, 12);
+            this.dtaInfo.Name = "dtaInfo";
+            this.dtaInfo.Size = new System.Drawing.Size(544, 327);
+            this.dtaInfo.TabIndex = 1;
+            this.dtaInfo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // dataGridView1
+            // Producto
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(22, 178);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView1.TabIndex = 1;
+            this.Producto.HeaderText = "Producto";
+            this.Producto.Name = "Producto";
+            // 
+            // Tipo
+            // 
+            this.Tipo.HeaderText = "Tipo";
+            this.Tipo.Name = "Tipo";
+            // 
+            // AdicionalUno
+            // 
+            this.AdicionalUno.HeaderText = "Adicional Nº Uno";
+            this.AdicionalUno.Name = "AdicionalUno";
+            // 
+            // AdicionalDos
+            // 
+            this.AdicionalDos.HeaderText = "Adicional Nº Dos";
+            this.AdicionalDos.Name = "AdicionalDos";
+            // 
+            // AdicionalTres
+            // 
+            this.AdicionalTres.HeaderText = "Adicional Nº Tres";
+            this.AdicionalTres.Name = "AdicionalTres";
             // 
             // frmCuatro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(631, 440);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.listBox1);
+            this.ClientSize = new System.Drawing.Size(572, 362);
+            this.Controls.Add(this.dtaInfo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCuatro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Michelin - Resumen";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtaInfo)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtaInfo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tipo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AdicionalUno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AdicionalDos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AdicionalTres;
     }
 }

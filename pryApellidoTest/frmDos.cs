@@ -23,6 +23,7 @@ namespace pryApellidoTest
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
+            
             grpUno.Visible = false;
             grpDos.Visible = true;
             //this.Hide();
@@ -36,6 +37,7 @@ namespace pryApellidoTest
         {
             if (txtNombre.Text == "")
             {
+                
                 MessageBox.Show("Debe Ingresar un Nombre", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtNombre.Focus();
             }
@@ -62,6 +64,7 @@ namespace pryApellidoTest
             
             if (e.KeyChar == 13 && txtNombre.Text != "")
             {
+               
                 MessageBox.Show("Registro exitoso", "Michelin", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 cmbLista.Items.Add((string)txtNombre.Text);
                 cmbProductos.Items.Add((string)txtNombre.Text);
@@ -92,6 +95,7 @@ namespace pryApellidoTest
 
             if (rdoEquipo.Checked == true || rdoRepuesto.Checked == true)
             {
+                
                 string detalle = "";
                 string Tipo = "";
                 Tipo = cmbProductos.Text;
@@ -121,15 +125,23 @@ namespace pryApellidoTest
                 }
 
                 MessageBox.Show("Craga Completa \n " + "Producto: " + Tipo + "\n" + detalle, "Michelin - Registro de Pedido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                btnSeguir.Enabled = true;
 
             }
         }
 
         private void btnSeguir_Click(object sender, EventArgs e)
         {
+            
             this.Hide();
             frmCuatro frmCuatro = new frmCuatro();
             frmCuatro.ShowDialog();
+            
+        }
+
+        private void grpDos_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
