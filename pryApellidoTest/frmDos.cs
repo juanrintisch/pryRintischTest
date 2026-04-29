@@ -126,26 +126,26 @@ namespace pryApellidoTest
                     Total = CostoBase;
                     detalle = detalle + "Instalación \n";
                 }
-                else if (chkEnvio.Checked == true)
+                if (chkEnvio.Checked == true)
                 {
                     Adicional = CostoBase * 0.05;
                     CostoBase = CostoBase + Adicional;
                     Total = CostoBase;
                     detalle = detalle + "Envío \n";
                 }
-                else if (chkGarantia.Checked == true)
+                if (chkGarantia.Checked == true)
                 {
                     AdicionalTotal = Total * 0.20;
                     Total = Total + AdicionalTotal;
                     detalle = detalle + "Garantía \n";
                 }
-                else if (chkInstalacion.Checked == true && chkEnvio.Checked == true)
+                if (chkInstalacion.Checked == true && chkEnvio.Checked == true)
                 {
                     Adicional = CostoBase * 0.20;
                     CostoBase = CostoBase + Adicional;
                     Total = CostoBase;
                 }
-                else if (chkInstalacion.Checked == true && chkGarantia.Checked == true)
+                if (chkInstalacion.Checked == true && chkGarantia.Checked == true)
                 {
                     Adicional = CostoBase * 0.15;
                     CostoBase = CostoBase + Adicional;
