@@ -29,11 +29,7 @@ namespace pryApellidoTest
 
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
-            if (cmbProducto.Text == "")
-            {
-                MessageBox.Show("Debe Seleccionar un Producto", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                cmbProducto.Focus();
-            }
+            
             
         }
     }
