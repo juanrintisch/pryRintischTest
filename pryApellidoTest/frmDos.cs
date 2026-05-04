@@ -95,16 +95,21 @@ namespace pryApellidoTest
 
             double CostoBase = 0;
             double Total = 0;
-            double Adicional = 0;
-            double Iva = 0;
-            double AdicionalTotal = 0;
+
+            double Envio = 0;
+            double Instalacion = 0;
+            double Garantia = 0;
+            double IVA = 0;
+
+            string Detalle = "";
+            string Tipo  = cmbProductos.Text;
 
             if (rdoEquipo.Checked == true || rdoRepuesto.Checked == true)
             {
 
                 string detalle = "";
-                string Tipo = "";
-                Tipo = cmbProductos.Text;
+                string tipo = "";
+                tipo = cmbProductos.Text;
 
                 if (rdoEquipo.Checked == true)
                 {
@@ -116,46 +121,40 @@ namespace pryApellidoTest
                     CostoBase = 350000;
                     detalle = "Tipo: Repuesto ";
                 }
-
+                
+                Total = CostoBase;
                 detalle = detalle + "\n Adicionales: \n";
 
-                if (chkInstalacion.Checked == true)
+                
+                if (chkEnvio.Checked)
                 {
-                    Adicional = CostoBase * 0.15;
-                    CostoBase = CostoBase + Adicional;
-                    Total = CostoBase;
-                    detalle = detalle + "Instalación \n";
-                }
-                if (chkEnvio.Checked == true)
-                {
-                    Adicional = CostoBase * 0.05;
-                    CostoBase = CostoBase + Adicional;
-                    Total = CostoBase;
-                    detalle = detalle + "Envío \n";
-                }
-                if (chkGarantia.Checked == true)
-                {
-                    AdicionalTotal = Total * 0.20;
-                    Total = Total + AdicionalTotal;
-                    detalle = detalle + "Garantía \n";
-                }
-                if (chkInstalacion.Checked == true && chkEnvio.Checked == true)
-                {
-                    Adicional = CostoBase * 0.20;
-                    CostoBase = CostoBase + Adicional;
-                    Total = CostoBase;
-                }
-                if (chkInstalacion.Checked == true && chkGarantia.Checked == true)
-                {
-                    Adicional = CostoBase * 0.15;
-                    CostoBase = CostoBase + Adicional;
-                    Total = CostoBase;
-                    AdicionalTotal = Total * 0.20;
-                    Total = Total + AdicionalTotal;
-
+                    Envio = CostoBase * 0.05;
+                    Total += Envio;
+                    detalle += "Envío: $" + Envio + "\n";
                 }
 
-                    MessageBox.Show("Carga Completa \n " + Total + "Producto: " + Tipo + "\n" + detalle, "Michelin - Registro de Pedido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+                if (chkInstalacion.Checked)
+                {
+                    Instalacion = CostoBase * 0.15;
+                    Total += Instalacion;
+                    detalle += "Instalación: $" + Instalacion + "\n";
+                }
+
+                
+                if (chkGarantia.Checked)
+                {
+                    Garantia = Total * 0.20;
+                    Total += Garantia;
+                    detalle += "Garantía: $" + Garantia + "\n";
+                }
+
+                
+                IVA = Total * 0.21;
+                Total += IVA;
+                detalle += "IVA: $" + IVA + "\n";
+                
+                MessageBox.Show("Carga Completa\n\nTotal Final: $" + Total +"\nProducto: " + tipo + "\n\n" + detalle,"Michelin - Registro de Pedido",MessageBoxButtons.OK,MessageBoxIcon.Information);
                 btnSeguir.Enabled = true;
 
             }
